@@ -6,11 +6,11 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Zehua Zeng" name="author"/>
-<link href="../install/" rel="prev"/>
-<link href="../env1/" rel="next"/>
+<link href="../env1/" rel="prev"/>
+<link href="../cloud/" rel="next"/>
 <link href="../img/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.2" name="generator"/>
-<title>jupyterlab/jupyter-notebook 安装 - Linux_serve</title>
+<title>jupyter-lab环境配置 - Linux_serve</title>
 <link href="../assets/stylesheets/main.7bf56d0a.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#jupyter">
+<a class="md-skip" href="#jupyter-lab-jupiter-lab">
           Skip to content
         </a>
 </div>
@@ -61,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              jupyterlab/jupyter-notebook 安装
+              jupyter-lab环境配置
             
           </span>
 </div>
@@ -145,14 +145,24 @@
           jupyter的构建
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../jupyter/">
+        jupyterlab/jupyter-notebook 安装
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../env1/">
+        vscode-jupyter环境配置
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          jupyterlab/jupyter-notebook 安装
+          jupyter-lab环境配置
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        jupyterlab/jupyter-notebook 安装
+        jupyter-lab环境配置
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -161,27 +171,26 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#jupyter-lab">
+    Jupyter-lab配置
+  </a>
+<nav aria-label="Jupyter-lab配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
 <a class="md-nav__link" href="#1-jupyter-lab">
-    1. jupyter-lab安装
+    1. 连接Jupyter-lab
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2-jupyter-notebook">
-    2. Jupyter-notebook安装
+<a class="md-nav__link" href="#2">
+    2. 浏览器运行
   </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../env1/">
-        vscode-jupyter环境配置
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../env2/">
-        jupyter-lab环境配置
-      </a>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -206,14 +215,23 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#jupyter-lab">
+    Jupyter-lab配置
+  </a>
+<nav aria-label="Jupyter-lab配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
 <a class="md-nav__link" href="#1-jupyter-lab">
-    1. jupyter-lab安装
+    1. 连接Jupyter-lab
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2-jupyter-notebook">
-    2. Jupyter-notebook安装
+<a class="md-nav__link" href="#2">
+    2. 浏览器运行
   </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -222,16 +240,22 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="jupyter">jupyter环境安装<a class="headerlink" href="#jupyter" title="Permanent link">¶</a></h1>
-<p>我知道，大家可能已经习惯jupyter-lab了，但是由于我们采用服务器并且是跳板机，所以一般情况下jupyter的访问会比较困难，不过我们可以采用vscode来解决这个问题。</p>
-<h2 id="1-jupyter-lab">1. jupyter-lab安装<a class="headerlink" href="#1-jupyter-lab" title="Permanent link">¶</a></h2>
-<p>在这里，我已经预先下载好了jupyter-lab的安装包，我们可以通过pip进行安装</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>pip<span class="w"> </span>install<span class="w"> </span>--no-index<span class="w"> </span>--find-links<span class="o">=</span><span class="s1">'/mnt/data/analysis/downloads'</span><span class="w"> </span>/mnt/data/analysis/downloads/jupyterlab-3.6.3-py3-none-any.whl
-</code></pre></div>
-<h2 id="2-jupyter-notebook">2. Jupyter-notebook安装<a class="headerlink" href="#2-jupyter-notebook" title="Permanent link">¶</a></h2>
-<p>在这里，我已经预先下载好了jupyter-notebook的安装包，我们可以通过pip进行安装</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>pip<span class="w"> </span>install<span class="w"> </span>--no-index<span class="w"> </span>--find-links<span class="o">=</span><span class="s1">'/mnt/data/analysis/downloads'</span><span class="w"> </span>/mnt/data/analysis/downloads/notebook-6.5.4-py3-none-any.whl
-</code></pre></div>
+<h1 id="jupyter-lab-jupiter-lab">Jupyter-lab 代码环境配置(Jupiter-lab)<a class="headerlink" href="#jupyter-lab-jupiter-lab" title="Permanent link">¶</a></h1>
+<p>你现在作为一个小白，对着命令行界面发愁。你在想，我该怎样才能让我的Python代码跑起来呢？这里提供两种方法，vscode-jupyter和jupyter-lab</p>
+<h2 id="jupyter-lab">Jupyter-lab配置<a class="headerlink" href="#jupyter-lab" title="Permanent link">¶</a></h2>
+<h3 id="1-jupyter-lab">1. 连接Jupyter-lab<a class="headerlink" href="#1-jupyter-lab" title="Permanent link">¶</a></h3>
+<p>首先我们打开Vscode，先连接上我们的服务器，注意不能是跳板机。这里的教程与上一个教程一致。不多赘述。我们直接在终端输入<code>jupyter-lab</code></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../env2.assets/image-20230418035221748.png"><img alt="image-20230418035221748" src="../env2.assets/image-20230418035221748.png"/></a></p>
+<p>与前面一样，出现了一个链接</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../env2.assets/image-20230418035312238.png"><img alt="image-20230418035312238" src="../env2.assets/image-20230418035312238.png"/></a></p>
+<p>我们浏览器一样是不能直接打开的，但是我们也可以进行端口转发，利用Port</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../env2.assets/image-20230418035414038.png"><img alt="image-20230418035414038" src="../env2.assets/image-20230418035414038.png"/></a></p>
+<h3 id="2">2. 浏览器运行<a class="headerlink" href="#2" title="Permanent link">¶</a></h3>
+<p>我们点击后，浏览器被自动打开，并跳转到登陆页面。我们复制链接后面的token。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../env2.assets/image-20230418035517971.png"><img alt="image-20230418035517971" src="../env2.assets/image-20230418035517971.png"/></a></p>
+<p>进去之后就是我们熟悉的Jupyter-lab环境了</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../env2.assets/image-20230418035544774.png"><img alt="image-20230418035544774" src="../env2.assets/image-20230418035544774.png"/></a></p>
+<p>好处是上传和下载文件会更方便了，坏处是你使用不了copilot了，无法享受代码自动补全的快乐了。</p>
 </article>
 </div>
 </div>

@@ -153,12 +153,47 @@
     2. Conda离线安装
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-conda-pack">
+    3. Conda-pack环境迁移
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          jupyter的构建
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          jupyter的构建
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../jupyter/">
+        jupyterlab/jupyter-notebook 安装
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../env1/">
+        vscode-jupyter环境配置
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../env2/">
+        jupyter-lab环境配置
+      </a>
+</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../jupyter/">
-        jupyter-lab的构建
+<a class="md-nav__link" href="../cloud/">
+        网盘使用教程
       </a>
 </li>
 </ul>
@@ -185,6 +220,11 @@
     2. Conda离线安装
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-conda-pack">
+    3. Conda-pack环境迁移
+  </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -205,7 +245,11 @@
 <p>然后我们使用pip download下载包的安装包</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>pip<span class="w"> </span>download<span class="w"> </span>Pyomic<span class="w"> </span>-d<span class="w"> </span>./<span class="w"> </span>
 </code></pre></div>
-<p>例如<code>Pyomic</code>是我们要下载的包，<code>-d</code>指定了包的下载目录，<code>./</code>代表当前目录，然后会把这个包相关的所有依赖项一起下载下来，然后我们使用<code>sftp</code>传输到服务器上，我们建议文件传输好后，移动到<code>/mnt/data/leihu</code>目录下，<code>leihu</code>为你自己的用户名，因为<code>/mnt/data</code>目录有15TB</p>
+<p>例如<code>Pyomic</code>是我们要下载的包，<code>-d</code>指定了包的下载目录，<code>./</code>代表当前目录，然后会把这个包相关的所有依赖项一起下载下来，然后我们使用<code>sftp</code>或者网盘传输到服务器上，网盘使用教程<a href="../cloud/">here</a>。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>我们建议文件传输好后，移动到<code>/mnt/data/leihu</code>目录下，<code>leihu</code>为你自己的用户名，因为<code>/mnt/data</code>目录有15TB</p>
+</div>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>pip<span class="w"> </span>install<span class="w"> </span>--no-index<span class="w"> </span>--find-links<span class="o">=</span><span class="s1">'/mnt/data/analysis/downloads'</span><span class="w"> </span>/mnt/data/leihu/Pyomic-1.1.7-py3-none-any.whl
 </code></pre></div>
 <p>其中<code>--find-links</code>参数代表依赖项的安装目录，我提前准备了大量依赖项在<code>/mnt/data/analysis/downloads</code>下避免你们重复上传下载，但是如果你们要装新的包，可能还是得自己上传下载。</p>
@@ -216,6 +260,8 @@
 </code></pre></div>
 <p><code>--use-local</code>参数就是你的包的路径<code>/home/leihu/SEQ/gffcompare-0.12.6-h9f5acd7_0.tar.bz2</code></p>
 <p>conda的包下载我一般会在anaconda.org上搜索下载：https://anaconda.org/conda-forge/conda，然后选择适合linux以及x86_64架构的包进行下载。</p>
+<h2 id="3-conda-pack">3. Conda-pack环境迁移<a class="headerlink" href="#3-conda-pack" title="Permanent link">¶</a></h2>
+<p>我们可以使用Conda-pack，将其他服务器上已经配好的环境迁移过来，具体教程见知乎<a href="https://zhuanlan.zhihu.com/p/540615230">here</a></p>
 </article>
 </div>
 </div>
